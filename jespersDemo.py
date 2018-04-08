@@ -13,8 +13,8 @@ def heardfunction():
 while(1):
 
     engine = pyttsx3.init()
-    #engine.say("Indepedence, April first, eighteen hundred eighty four. The weather is cool and a breeze sweeps down the busy street full of settlers. Throughout the game you will always have 6 menu pins in the pin row closest to you with different textures on top that can be used to access different actions. Actions might not be available always, and if unavailable the height of the pin will be in a lowered state. You can always briefly press a pin to get the action read aloud, the action is selected by pressing the pin for a longer period. From left to right the pins provide access to: 1, Continue on trail. 2, Feel the map. 3, buy supplies. 4, Hunt for food. 5, Talk to people in the area")
-    #engine.runAndWait()
+    engine.say("Indepedence, April first, eighteen hundred eighty four. The weather is cool and a breeze sweeps down the busy street full of settlers. Throughout the game you will always have 6 menu pins in the pin row closest to you with different textures on top that can be used to access different actions. Actions might not be available always, and if unavailable the height of the pin will be in a lowered state. You can always briefly press a pin to get the action read aloud, the action is selected by pressing the pin for a longer period. From left to right the pins provide access to: 1, Continue on trail. 2, Feel the map. 3, buy supplies. 4, Hunt for food. 5, Talk to people in the area")
+    engine.runAndWait()
     # recognition takes a function that is called when keyword is head, the keyword, and if it should keep listening for the keyword
     inputNum = input('1: Feel the map, 2: Continue on the trail, 3: Buy Supplies, 4: Hunt for food, 5: Talk to people nearby, 6: Check your inventory').lower()
 
