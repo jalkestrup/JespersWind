@@ -1,22 +1,30 @@
 import cv2
 import numpy as np
+import pygame
+from pygame.locals import *
 # import listening
 import connect
-from playsound import playsound
+#from playsound import playsound
+
 
 #np.set_printoptions(threshold=np.inf)
 
 #channel = connect.join()
 
+pygame.init()
+pygame.mixer.pre_init(44100, 16, 2, 4096)
+
 while(1):
+
+    pygame.mixer.music.load('sound/winchester.wav')
 
     # recognition takes a function that is called when keyword is head, the keyword, and if it should keep listening for the keyword
     moreGoods = input('Do you want to go hunting?: ').lower()
 
     if moreGoods == 'yes':
         print ("SHOOT SHOOOT!")
-        playsound('sound/winchester.wav')
-        playsound('sound/cow.wav')
+        #playsound('sound/winchester.wav')
+        #playsound('sound/cow.wav')
 
         # load image
         cap = cv2.VideoCapture('vid/hunting.avi', 0)
@@ -54,6 +62,7 @@ while(1):
                     for col,val2 in enumerate(val):
                         if 80 > val2 > 10:
                             correct.append((row,col))
+                            pygame.mixer.music.play(0,0.0)
                 print(correct)
 
                 # flatten array
